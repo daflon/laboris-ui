@@ -1,0 +1,126 @@
+/* Input Component */
+.laboris-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--laboris-space-xs);
+}
+
+.laboris-input-wrapper--full-width {
+  width: 100%;
+}
+
+.laboris-label {
+  font-size: var(--laboris-font-size-sm);
+  font-weight: var(--laboris-font-weight-medium);
+  color: var(--laboris-text);
+}
+
+.laboris-label--required::after {
+  content: " *";
+  color: var(--laboris-danger);
+}
+
+.laboris-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.laboris-input {
+  width: 100%;
+  height: 40px;
+  padding: 0 var(--laboris-space-md);
+  font-family: var(--laboris-font-family);
+  font-size: var(--laboris-font-size-sm);
+  color: var(--laboris-text);
+  background: var(--laboris-bg-input);
+  border: 1px solid var(--laboris-border);
+  border-radius: var(--laboris-radius-md);
+  transition: all var(--laboris-transition-fast);
+}
+
+.laboris-input::placeholder {
+  color: var(--laboris-text-subtle);
+}
+
+.laboris-input:hover:not(:disabled) {
+  border-color: var(--laboris-text-muted);
+}
+
+.laboris-input:focus {
+  outline: none;
+  border-color: var(--laboris-primary);
+  box-shadow: 0 0 0 3px var(--laboris-primary-light);
+}
+
+.laboris-input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: var(--laboris-bg-hover);
+}
+
+/* Sizes */
+.laboris-input--sm {
+  height: 32px;
+  padding: 0 var(--laboris-space-sm);
+  font-size: var(--laboris-font-size-xs);
+}
+
+.laboris-input--lg {
+  height: 48px;
+  padding: 0 var(--laboris-space-lg);
+  font-size: var(--laboris-font-size-base);
+}
+
+/* Error state */
+.laboris-input--error {
+  border-color: var(--laboris-danger);
+}
+
+.laboris-input--error:focus {
+  border-color: var(--laboris-danger);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+}
+
+/* With icon */
+.laboris-input--with-left-icon {
+  padding-left: 40px;
+}
+
+.laboris-input--with-right-icon {
+  padding-right: 40px;
+}
+
+.laboris-input__icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 100%;
+  color: var(--laboris-text-muted);
+  pointer-events: none;
+}
+
+.laboris-input__icon--left {
+  left: 0;
+}
+
+.laboris-input__icon--right {
+  right: 0;
+}
+
+.laboris-input__icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Helper text */
+.laboris-input__helper {
+  font-size: var(--laboris-font-size-xs);
+  color: var(--laboris-text-muted);
+}
+
+.laboris-input__helper--error {
+  color: var(--laboris-danger);
+}

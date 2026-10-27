@@ -1,0 +1,44 @@
+/* EmptyState Component */
+.laboris-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--laboris-space-2xl) var(--laboris-space-lg);
+  text-align: center;
+}
+
+.laboris-empty__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  margin-bottom: var(--laboris-space-md);
+  background: var(--laboris-bg-hover);
+  border-radius: var(--laboris-radius-full);
+  color: var(--laboris-text-muted);
+}
+
+.laboris-empty__icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.laboris-empty__title {
+  font-size: var(--laboris-font-size-lg);
+  font-weight: var(--laboris-font-weight-semibold);
+  color: var(--laboris-text);
+  margin: 0 0 var(--laboris-space-xs);
+}
+
+.laboris-empty__description {
+  font-size: var(--laboris-font-size-sm);
+  color: var(--laboris-text-muted);
+  margin: 0 0 var(--laboris-space-lg);
+  max-width: 360px;
+}
+
+.laboris-empty__action {
+  margin-top: var(--laboris-space-md);
+}

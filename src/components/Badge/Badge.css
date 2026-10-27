@@ -1,0 +1,70 @@
+/* Badge Component */
+.laboris-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  font-family: var(--laboris-font-family);
+  font-size: var(--laboris-font-size-xs);
+  font-weight: var(--laboris-font-weight-semibold);
+  border-radius: var(--laboris-radius-full);
+  white-space: nowrap;
+}
+
+/* Variants - WCAG AA compliant */
+.laboris-badge--default {
+  background: var(--laboris-bg-hover);
+  color: var(--laboris-text);
+}
+
+.laboris-badge--success {
+  background: var(--laboris-success-bg);
+  color: var(--laboris-success-text);
+}
+
+.laboris-badge--warning {
+  background: var(--laboris-warning-bg);
+  color: var(--laboris-warning-text);
+}
+
+.laboris-badge--danger {
+  background: var(--laboris-danger-bg);
+  color: var(--laboris-danger-text);
+}
+
+.laboris-badge--info {
+  background: var(--laboris-info-bg);
+  color: var(--laboris-info-text);
+}
+
+/* With dot indicator */
+.laboris-badge--with-dot::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+/* Sizes */
+.laboris-badge--sm {
+  padding: 1px 6px;
+  font-size: 10px;
+}
+
+.laboris-badge--lg {
+  padding: 4px 12px;
+  font-size: var(--laboris-font-size-sm);
+}
+
+/* Icon */
+.laboris-badge__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.laboris-badge__icon svg {
+  width: 12px;
+  height: 12px;
+}

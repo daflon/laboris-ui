@@ -1,0 +1,77 @@
+/* Card Component */
+.laboris-card {
+  background: var(--laboris-bg-card);
+  border: 1px solid var(--laboris-border);
+  border-radius: var(--laboris-radius-lg);
+  overflow: hidden;
+}
+
+.laboris-card--hoverable {
+  transition: all var(--laboris-transition-normal);
+  cursor: pointer;
+}
+
+.laboris-card--hoverable:hover {
+  border-color: var(--laboris-primary);
+  box-shadow: var(--laboris-shadow-md);
+}
+
+/* Padding variants */
+.laboris-card--padding-none {
+  padding: 0;
+}
+
+.laboris-card--padding-sm {
+  padding: var(--laboris-space-sm);
+}
+
+.laboris-card--padding-md {
+  padding: var(--laboris-space-md);
+}
+
+.laboris-card--padding-lg {
+  padding: var(--laboris-space-lg);
+}
+
+/* Card Header */
+.laboris-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--laboris-space-md);
+  border-bottom: 1px solid var(--laboris-border);
+}
+
+.laboris-card__title {
+  font-size: var(--laboris-font-size-lg);
+  font-weight: var(--laboris-font-weight-semibold);
+  color: var(--laboris-text);
+  margin: 0;
+}
+
+.laboris-card__subtitle {
+  font-size: var(--laboris-font-size-sm);
+  color: var(--laboris-text-muted);
+  margin: var(--laboris-space-xs) 0 0;
+}
+
+.laboris-card__actions {
+  display: flex;
+  gap: var(--laboris-space-sm);
+}
+
+/* Card Body */
+.laboris-card__body {
+  padding: var(--laboris-space-md);
+}
+
+/* Card Footer */
+.laboris-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--laboris-space-sm);
+  padding: var(--laboris-space-md);
+  border-top: 1px solid var(--laboris-border);
+  background: rgba(0, 0, 0, 0.1);
+}

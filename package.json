@@ -1,0 +1,45 @@
+{
+  "name": "@laboris/ui",
+  "version": "0.1.0",
+  "description": "Componentes compartilhados da Suite Laboris",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./styles": "./dist/styles.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --external react",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --external react --watch",
+    "lint": "eslint src/",
+    "clean": "rimraf dist"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tsup": "^8.0.0",
+    "typescript": "^5.5.0",
+    "rimraf": "^5.0.0"
+  },
+  "keywords": ["react", "components", "laboris", "ui"],
+  "author": "daflon",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/daflon/laboris-ui.git"
+  }
+}

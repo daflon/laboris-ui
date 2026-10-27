@@ -1,0 +1,139 @@
+/* Button Component */
+.laboris-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--laboris-space-sm);
+  font-family: var(--laboris-font-family);
+  font-weight: var(--laboris-font-weight-medium);
+  border-radius: var(--laboris-radius-md);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all var(--laboris-transition-fast);
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.laboris-btn:focus-visible {
+  outline: 2px solid var(--laboris-primary);
+  outline-offset: 2px;
+}
+
+.laboris-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Sizes */
+.laboris-btn--sm {
+  height: 32px;
+  padding: 0 var(--laboris-space-sm);
+  font-size: var(--laboris-font-size-sm);
+}
+
+.laboris-btn--md {
+  height: 40px;
+  padding: 0 var(--laboris-space-md);
+  font-size: var(--laboris-font-size-sm);
+}
+
+.laboris-btn--lg {
+  height: 48px;
+  padding: 0 var(--laboris-space-lg);
+  font-size: var(--laboris-font-size-base);
+}
+
+/* Variants */
+.laboris-btn--primary {
+  background: var(--laboris-primary);
+  color: white;
+}
+
+.laboris-btn--primary:hover:not(:disabled) {
+  background: var(--laboris-primary-hover);
+}
+
+.laboris-btn--secondary {
+  background: transparent;
+  color: var(--laboris-text);
+  border-color: var(--laboris-border);
+}
+
+.laboris-btn--secondary:hover:not(:disabled) {
+  background: var(--laboris-bg-hover);
+}
+
+.laboris-btn--ghost {
+  background: transparent;
+  color: var(--laboris-text-muted);
+}
+
+.laboris-btn--ghost:hover:not(:disabled) {
+  background: var(--laboris-bg-hover);
+  color: var(--laboris-text);
+}
+
+.laboris-btn--danger {
+  background: var(--laboris-danger);
+  color: white;
+}
+
+.laboris-btn--danger:hover:not(:disabled) {
+  background: #dc2626; /* red-600 */
+}
+
+/* Full Width */
+.laboris-btn--full-width {
+  width: 100%;
+}
+
+/* Loading */
+.laboris-btn--loading {
+  position: relative;
+  color: transparent;
+}
+
+.laboris-btn__spinner {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.laboris-btn__spinner svg {
+  width: 20px;
+  height: 20px;
+  animation: laboris-spin 1s linear infinite;
+  color: currentColor;
+}
+
+.laboris-btn--loading .laboris-btn__spinner {
+  color: white;
+}
+
+.laboris-btn--secondary.laboris-btn--loading .laboris-btn__spinner,
+.laboris-btn--ghost.laboris-btn--loading .laboris-btn__spinner {
+  color: var(--laboris-text);
+}
+
+/* Icons */
+.laboris-btn__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.laboris-btn__icon svg {
+  width: 1em;
+  height: 1em;
+}
+
+/* Keyframes */
+@keyframes laboris-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,110 @@
+/* SearchInput Component */
+.laboris-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.laboris-search--full-width {
+  width: 100%;
+}
+
+.laboris-search__icon {
+  position: absolute;
+  left: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--laboris-text-muted);
+  pointer-events: none;
+}
+
+.laboris-search__icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.laboris-search__input {
+  width: 100%;
+  height: 40px;
+  padding: 0 var(--laboris-space-md) 0 40px;
+  font-family: var(--laboris-font-family);
+  font-size: var(--laboris-font-size-sm);
+  color: var(--laboris-text);
+  background: var(--laboris-bg-input);
+  border: 1px solid var(--laboris-border);
+  border-radius: var(--laboris-radius-md);
+  transition: all var(--laboris-transition-fast);
+}
+
+.laboris-search__input::placeholder {
+  color: var(--laboris-text-subtle);
+}
+
+.laboris-search__input:hover {
+  border-color: var(--laboris-text-muted);
+}
+
+.laboris-search__input:focus {
+  outline: none;
+  border-color: var(--laboris-primary);
+  box-shadow: 0 0 0 3px var(--laboris-primary-light);
+}
+
+.laboris-search__clear {
+  position: absolute;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: var(--laboris-radius-full);
+  color: var(--laboris-text-muted);
+  cursor: pointer;
+  transition: all var(--laboris-transition-fast);
+}
+
+.laboris-search__clear:hover {
+  background: var(--laboris-bg-hover);
+  color: var(--laboris-text);
+}
+
+.laboris-search__clear svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Sizes */
+.laboris-search--sm .laboris-search__input {
+  height: 32px;
+  padding-left: 32px;
+  font-size: var(--laboris-font-size-xs);
+}
+
+.laboris-search--sm .laboris-search__icon {
+  left: 8px;
+}
+
+.laboris-search--sm .laboris-search__icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+.laboris-search--lg .laboris-search__input {
+  height: 48px;
+  padding-left: 48px;
+  font-size: var(--laboris-font-size-base);
+}
+
+.laboris-search--lg .laboris-search__icon {
+  left: 14px;
+}
+
+.laboris-search--lg .laboris-search__icon svg {
+  width: 20px;
+  height: 20px;
+}

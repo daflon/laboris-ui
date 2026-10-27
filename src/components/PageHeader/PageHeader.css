@@ -1,0 +1,45 @@
+/* PageHeader Component */
+.laboris-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--laboris-space-lg);
+  flex-wrap: wrap;
+  gap: var(--laboris-space-md);
+}
+
+.laboris-page-header__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--laboris-space-xs);
+}
+
+.laboris-page-header__title {
+  font-size: var(--laboris-font-size-2xl);
+  font-weight: var(--laboris-font-weight-bold);
+  color: var(--laboris-text);
+  margin: 0;
+}
+
+.laboris-page-header__subtitle {
+  font-size: var(--laboris-font-size-sm);
+  color: var(--laboris-text-muted);
+  margin: 0;
+}
+
+.laboris-page-header__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--laboris-space-sm);
+}
+
+@media (max-width: 640px) {
+  .laboris-page-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .laboris-page-header__actions {
+    flex-wrap: wrap;
+  }
+}
